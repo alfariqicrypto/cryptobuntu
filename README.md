@@ -1,0 +1,27 @@
+# Welcome to Buntu!
+Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
+
+* Algorithm: Scrypt
+* Max Supply: 18,000,000
+* Spacing: 2.5 Minutes
+* 10 Block Confirmation Time
+* Port: 32821
+* RPCport: 32822
+* Block Rewards
+	* PoW: 1 BTNU per block for 600 blocks (to kickstart PoS)
+	* PoS: 2.25 BNTU per block
+	* Masternodes: .25 BNTU per Block
+* Masternode collateral: 5 BNTU
+* Minimum Stake Age: 2 hours
+
+***
+
+#### [Linux Build Instructions](https://github.com/CRYPTOBUNTU/Buntu/blob/master/Linux_Build.md)
+
+#### [Masternode Setup Guide](https://github.com/CRYPTOBUNTU/Buntu/blob/master/Masternode_Setup_Guide.md)
+
+***
+
+#### Join us on [Telegram](https://t.me/) and [Discord](https://discord.gg/). Visit our [Website](http://) or you can find us on [Twitter](https://twitter.com/)
+
+***
