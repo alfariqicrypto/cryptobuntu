@@ -1,7 +1,7 @@
 # Masternode Setup Guide
 
 ### 1. Requirements
-* 5000 BNTU  
+* 5 BNTU  
 * VPS server
 	* [Vultr](https://www.vultr.com/?ref=7684542)
 	* [Digital Ocean](https://m.do.co/c/917baa6de4c8)
@@ -29,9 +29,9 @@ Go to the `Send` tab
 
 *Use "Coin Control" to select your collateral. If Coin Control is not visible, enable by navigating to menu >Options>Display*
 
-Paste the address on the `Pay To` box and enter 5000 in the `Amount` box  
+Paste the address on the `Pay To` box and enter 5 in the `Amount` box  
 
-*Note : You must be sent exactly 5000 BNTU in a single transaction*  
+*Note : You must be sent exactly 5 BNTU in a single transaction*  
 
 Click `Send` *(do not check `Darksend`)*
 
@@ -93,7 +93,7 @@ The "status" of your masternode will be one of the following:
 ___
 ### 4. Setup local wallet part 2 of 2  
 
-After 15 confirmations type `masternode outputs` in the `Debug window`
+After 10 confirmations type `masternode outputs` in the `Debug window` in your wallet
 
 Copy the TxHash and output index number and paste it into your text editor
 
@@ -104,7 +104,9 @@ Go to the `Masternodes` tab
 
 Click the `Create...` button
 
-Fill in the form using the information recorded in your text editor from previous steps
+Fill in the form using the instructions provided by the wallet. Use the information recorded in your text editor from previous steps.
+
+Note: Be sure to add :32821 to the end of the VPS ip in the "Address" field!
 
 Click `OK`  
 
