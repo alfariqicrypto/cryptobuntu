@@ -42,7 +42,7 @@ Makefile.Release
 object_script.buntu-qt.Debug
 object_script.buntu-qt.Release
 buntu-qt_plugin_import.cpp
-src/leveldb
+#src/leveldb
 src/qt/locale
 #src/secp256k1/build-aux
 *.patch
