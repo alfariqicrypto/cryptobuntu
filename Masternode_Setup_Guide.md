@@ -9,7 +9,7 @@
 * Text Editor (e.g. Notepad)
 ___
 ### 2. Local wallet setup part 1 of 2  
-Download latest wallet: [GitHub](https://github.com/CRYPTOBUNTU/buntu/releases)  
+Download latest wallet: [GitHub](https://github.com/CRYPT0BUNTU/buntu/releases)  
 
 Open the wallet
 
@@ -56,13 +56,13 @@ Paste the applicable command below into your terminal to run the automated maste
 
 Ubuntu 16.04 VPS:
 ```
-wget -q https://github.com/CRYPTOBUNTU/buntu/releases/download/3.01/masternode1604.sh
+wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1604.sh
 bash masternode1604.sh
 ```  
 
 Ubuntu 18.04 VPS:
 ```
-wget -q https://github.com/CRYPTOBUNTU/buntu/releases/download/3.01/masternode1804.sh
+wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1804.sh
 bash masternode1804.sh
 ```  
 Paste your masternode genkey when prompted
