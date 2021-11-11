@@ -36,7 +36,7 @@ release/
 debug/
 buntud
 buntu-qt
-Makefile
+#Makefile
 Makefile.Debug
 Makefile.Release
 object_script.buntu-qt.Debug
