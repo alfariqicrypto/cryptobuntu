@@ -61,7 +61,7 @@ To install, first follow the instructions to install dependencies for 16.04 or 1
     sudo reboot
 
 #####  Download Source code
-    sudo git clone https://github.com/CRYPTOBUNTU/Buntu.git
+    sudo git clone https://github.com/CRYPT0BUNTU/Buntu.git
 
 ### Compiling  
     cd buntu/src/leveldb  
