@@ -56,18 +56,18 @@ Paste the applicable command below into your terminal to run the automated maste
 
 Ubuntu 16.04 VPS:
 ```
+sudo apt-get install dos2unix -y
 wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1604.sh
 chmod +x masternode1604.sh
-sudo apt-get install dos2unix -y
 dos2unix masternode1804.sh
 bash masternode1604.sh
 ```  
 
 Ubuntu 18.04 VPS:
 ```
+sudo apt-get install dos2unix -y
 wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1804.sh
 chmod +x masternode1804.sh
-sudo apt-get install dos2unix -y
 dos2unix masternode1804.sh
 bash masternode1804.sh
 ```  
