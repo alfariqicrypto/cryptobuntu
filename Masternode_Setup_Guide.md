@@ -58,6 +58,8 @@ Ubuntu 16.04 VPS:
 ```
 wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1604.sh
 chmod +x masternode1604.sh
+sudo apt-get install dos2unix -y
+dos2unix masternode1804.sh
 bash masternode1604.sh
 ```  
 
@@ -65,6 +67,8 @@ Ubuntu 18.04 VPS:
 ```
 wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1804.sh
 chmod +x masternode1804.sh
+sudo apt-get install dos2unix -y
+dos2unix masternode1804.sh
 bash masternode1804.sh
 ```  
 Paste your masternode genkey when prompted
