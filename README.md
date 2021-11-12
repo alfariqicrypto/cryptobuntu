@@ -25,4 +25,4 @@ Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
 #### Join us on [Telegram](https://t.me/buntucryptocurrency) and [Discord](https://discord.gg/UbU2f9HFXH). Visit our [Website](http://) or you can find us on [Twitter](https://twitter.com/)
 
 ***
-### Looking for our logo? You can find it [here](https://buntucryptocurrency.com/WhitepaperPics/logo.png)
+### Looking for our logo? You can find it [here](http://buntucryptocurrency.com/WhitepaperPics/logo.png)
