@@ -1,21 +1,21 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='buntud.conf'
+CONFIG_FILE='buntu.conf'
 CONFIGFOLDER='/root/.buntu'
 COIN_DAEMON='buntud'
 COIN_CLI='buntud'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/CRYPT0BUNTU/Buntu.git'
 COIN_TGZ='https://github.com/CRYPT0BUNTU/Buntu/releases/download/1.0/buntud1804.tar.gz'
-COIN_BOOTSTRAP='https://github.com/CRYPT0BUNTU/Buntu/releases/download/1.0/bootstrap.tar.gz'
+COIN_BOOTSTRAP=''
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_CHAIN=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='buntu'
 COIN_PORT=32821
 RPC_PORT=32822
-BOOTSTRAPFILE='bootstrap.tar.gz'
+BOOTSTRAPFILE=''
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -288,7 +288,7 @@ function setup_node() {
   create_key
   update_config
   enable_firewall
-  #download_bootstrap
+  download_bootstrap
   important_information
   configure_systemd
 }
