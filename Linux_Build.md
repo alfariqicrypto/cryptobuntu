@@ -5,20 +5,7 @@ Buntu requires
 * boost 1.57
 * miniupnpc
 
-To install, first follow the instructions to install dependencies for 16.04 or 18.04. Then, follow the compilation instructions.
-
-## Dependencies (Ubuntu 16.04)
-    sudo apt-get update && apt-get upgrade  
-    sudo apt-get dist-upgrade  
-    sudo apt-get install libzmq3-dev libminiupnpc-dev libssl-dev libevent-dev -y  
-    sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
-    sudo apt-get install libssl-dev libevent-dev bsdmainutils   software-properties-common -y  
-    sudo apt-get install libboost-all-dev -y  
-    sudo add-apt-repository ppa:bitcoin/bitcoin  
-    sudo apt-get update  
-    sudo apt-get install libdb4.8-dev libdb4.8++-dev  -y  
-    sudo apt-get install libgmp3-dev
-	sudo apt-get install libdb5.3++ unzip libzmq5 -y
+To install, first follow the instructions to install dependencies 18.04 then follow the compilation instructions.
 
   ## Dependencies (Ubuntu 18.04)
 
@@ -41,13 +28,7 @@ To install, first follow the instructions to install dependencies for 16.04 or 1
       ./config --prefix=/usr/
       make
       sudo make install
-
-## Compilation (Ubuntu 16.04 and Ubuntu 18.04)
-#### Firewall
-    sudo ufw limit ssh/tcp  
-    sudo ufw allow 62620/tcp  
-    sudo ufw enable  
-
+      
 #### Swapfile
     fallocate -l 4G /swapfile  
     chown root:root /swapfile  
@@ -64,12 +45,8 @@ To install, first follow the instructions to install dependencies for 16.04 or 1
     sudo git clone https://github.com/CRYPT0BUNTU/Buntu.git
 
 ### Compiling  
-    cd Buntu/src/leveldb  
-    chmod +x build_detect_platform  
-    make clean  
-    make libleveldb.a libmemenv.a  
-    cd ../  
-    make -f makefile.unix  
+    cd Buntu
+    sudo make -f makefile.unix  
 
 ##### Edit the config file  
     nano ~/.buntu/buntu.conf  
