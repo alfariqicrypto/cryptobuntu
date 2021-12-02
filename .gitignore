@@ -46,5 +46,3 @@ buntu-qt_plugin_import.cpp
 #src/qt/locale
 #src/secp256k1/build-aux
 *.patch
-compile-s-l-QXAN32.sh
-compile-QXAN32.sh
