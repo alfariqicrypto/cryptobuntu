@@ -10,16 +10,17 @@ To install, first follow the instructions to install dependencies 18.04 then fol
   ## Dependencies (Ubuntu 18.04)
 
     sudo apt-get update && apt-get upgrade  
-    sudo apt-get dist-upgrade  
+    sudo apt-get dist-upgrade
+    sudo apt-get install git screen net-tools
     sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y  
     sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
-    sudo apt-get install libevent-dev bsdmainutils   software-properties-common -y  
+    sudo apt-get install libevent-dev bsdmainutils software-properties-common -y  
     sudo apt-get install libboost-all-dev -y  
     sudo add-apt-repository ppa:bitcoin/bitcoin  
     sudo apt-get update  
     sudo apt-get install libdb4.8-dev libdb4.8++-dev  -y  
     sudo apt-get install libgmp3-dev
-  	sudo apt-get install libdb5.3++ unzip libzmq5 -y
+    sudo apt-get install libdb5.3++ unzip libzmq5 -y
 
     ##### Special instructions for openssl-1.0.2n on Ubuntu 18.04:
       wget http://www.openssl.org/source/openssl-1.0.2n.tar.gz
@@ -45,7 +46,7 @@ To install, first follow the instructions to install dependencies 18.04 then fol
     sudo git clone https://github.com/CRYPT0BUNTU/Buntu.git
 
 ### Compiling  
-    cd Buntu
+    cd Buntu/src
     sudo make -f makefile.unix  
 
 ##### Edit the config file  
