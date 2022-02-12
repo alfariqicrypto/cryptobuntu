@@ -18,6 +18,11 @@ Compilers Supported
 TODO: What works?
 Note: releases are cross-compiled using mingw running on Linux.
 
+If you're building on Ubuntu 17.04 or later, run these two commands, selecting the 'posix' variant for both, to work around issues with mingw-w64. See issue [8732](https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md#footnote1) for more information.
+```
+sudo update-alternatives --config x86_64-w64-mingw32-g++
+sudo update-alternatives --config x86_64-w64-mingw32-gcc
+```
 
 Dependencies
 ------------
