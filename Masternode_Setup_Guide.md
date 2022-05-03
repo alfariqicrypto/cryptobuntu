@@ -66,7 +66,7 @@ Run the setup commands:
 ```
 wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1604.sh
 chmod +x masternode1604.sh
-dos2unix masternode1804.sh
+dos2unix masternode1604.sh
 bash masternode1604.sh
 
 ```  
