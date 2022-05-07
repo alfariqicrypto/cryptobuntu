@@ -5,8 +5,6 @@ Buntu requires
 * boost 1.57.0
 * miniupnpc
 
-To install, first follow the instructions to install dependencies 18.04 then follow the compilation instructions.
-
   ## Dependencies (Ubuntu 20.04)
 
     sudo apt-get update && apt-get upgrade  
