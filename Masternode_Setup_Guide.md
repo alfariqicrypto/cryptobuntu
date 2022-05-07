@@ -94,7 +94,7 @@ Paste your masternode genkey when prompted
 ```  
 Masternodes built with Ubuntu 20.04 must be compiled manually. 
 
-Follow the compilation instructions in the [Ubuntu 20.04 Build Guide](https://github.com/CRYPT0BUNTU/Buntu/blob/master/Ubuntu_20_04_Build.md)
+Follow the compilation instructions here: https://github.com/CRYPT0BUNTU/Buntu/blob/master/Ubuntu_20_04_Build.md
 
 Paste your masternode genkey in configuration file as detailed in the step, "Edit the config file"
 ```  
