@@ -6,18 +6,18 @@ Buntu requires
 * miniupnpc
 
   ## Dependencies (Ubuntu 20.04)
-	```
-	sudo apt-get update && apt-get upgrade  
-    	sudo apt-get dist-upgrade
-    	sudo apt-get install git screen net-tools
-    	sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y  
-    	sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
-    	sudo apt-get install libevent-dev bsdmainutils software-properties-common -y   
-    	sudo apt-get update  
-    	sudo apt-get install libgmp3-dev
-    	sudo apt-get install libdb5.3++ unzip libzmq5 -y
-	```
-    ##### Install openssl-1.0.2n on Ubuntu 20.04:
+ ```
+sudo apt-get update && apt-get upgrade  
+sudo apt-get dist-upgrade
+sudo apt-get install git screen net-tools
+sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y  
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
+sudo apt-get install libevent-dev bsdmainutils software-properties-common -y   
+sudo apt-get update  
+sudo apt-get install libgmp3-dev
+sudo apt-get install libdb5.3++ unzip libzmq5 -y
+```
+##### Install openssl-1.0.2n on Ubuntu 20.04:
 		cd ~
 		sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 		echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
@@ -30,7 +30,7 @@ Buntu requires
 		make
 		sudo make install
 	  
-	##### Install berkeley 4.8 db on Ubuntu 20.04:
+##### Install berkeley 4.8 db on Ubuntu 20.04:
 		cd ~
 		wget http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz
 		tar -xvzf db-4.8.30.tar.gz
@@ -42,7 +42,7 @@ Buntu requires
 		sudo make install
 		export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 		
-	##### Install boost 1.57 on Ubuntu 20.04 (get some coffee, this will take a while):
+##### Install boost 1.57 on Ubuntu 20.04 (get some coffee, this will take a while):
 		cd ~
 		wget http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.gz
 		tar -xvzf boost_1_57_0.tar.gz
