@@ -16,7 +16,9 @@ Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
 
 ***
 
-#### [Linux Build Instructions](https://github.com/CRYPT0BUNTU/Buntu/blob/master/Linux_Build.md)
+#### [Ubuntu 18.04 Build Instructions](https://github.com/CRYPT0BUNTU/Buntu/blob/master/Linux_Build.md)
+
+#### [Ubuntu 20.04 Build Instructions](https://github.com/CRYPT0BUNTU/Buntu/blob/master/Ubuntu_20_04_Build.md)
 
 #### [Masternode Setup Guide](https://github.com/CRYPT0BUNTU/Buntu/blob/master/Masternode_Setup_Guide.md)
 
