@@ -6,17 +6,17 @@ Buntu requires
 * miniupnpc
 
   ## Dependencies (Ubuntu 20.04)
-
-    sudo apt-get update && apt-get upgrade  
-    sudo apt-get dist-upgrade
-    sudo apt-get install git screen net-tools
-    sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y  
-    sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
-    sudo apt-get install libevent-dev bsdmainutils software-properties-common -y   
-    sudo apt-get update  
-    sudo apt-get install libgmp3-dev
-    sudo apt-get install libdb5.3++ unzip libzmq5 -y
-
+	```
+	sudo apt-get update && apt-get upgrade  
+    	sudo apt-get dist-upgrade
+    	sudo apt-get install git screen net-tools
+    	sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y  
+    	sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
+    	sudo apt-get install libevent-dev bsdmainutils software-properties-common -y   
+    	sudo apt-get update  
+    	sudo apt-get install libgmp3-dev
+    	sudo apt-get install libdb5.3++ unzip libzmq5 -y
+	```
     ##### Install openssl-1.0.2n on Ubuntu 20.04:
 		cd ~
 		sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
