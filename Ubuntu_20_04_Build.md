@@ -101,7 +101,7 @@ For masternodes, also add:
 ```
 masternode=1  
 masternodeprivkey=your private key
-masternodeaddr=your VPS IP:32822
+masternodeaddr=your VPS IP:32821
 ```
 #### Usage  
 Start daemon
