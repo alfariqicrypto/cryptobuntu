@@ -85,9 +85,9 @@ sudo make -f makefile.unix
 ##### Edit the config file  
 ```
 nano ~/.buntu/buntu.conf  
-
+```
 Copy and paste the following:
-	
+```	
 rpcuser=username(Configure your own)  
 rpcpassword=password(Configure your own)  
 rpcallowip=127.0.0.1  
