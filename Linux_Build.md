@@ -61,7 +61,7 @@ listen=1
 logtimestamps=1  
 maxconnections=256  
 
-	For masternodes, also add:
+   For masternodes, also add:
 
 masternode=1  
 masternodeprivkey=your private key
