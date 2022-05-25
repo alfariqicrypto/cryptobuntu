@@ -52,20 +52,20 @@ To install, first follow the instructions to install dependencies 18.04 then fol
 ##### Edit the config file  
     nano ~/.buntu/buntu.conf  
 
-		rpcuser=username(Configure your own)  
-		rpcpassword=password(Configure your own)  
-		rpcallowip=127.0.0.1  
-		daemon=1  
-		server=1  
-		listen=1  
-		logtimestamps=1  
-		maxconnections=256  
+rpcuser=username(Configure your own)  
+rpcpassword=password(Configure your own)  
+rpcallowip=127.0.0.1  
+daemon=1  
+server=1  
+listen=1  
+logtimestamps=1  
+maxconnections=256  
 
 	For masternodes, also add:
 
-		masternode=1  
-		masternodeprivkey=your private key
-		masternodeaddr=your VPS IP:32822
+masternode=1  
+masternodeprivkey=your private key
+masternodeaddr=your VPS IP:32821
 
 #### Usage  
 Start daemon
