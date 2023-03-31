@@ -54,23 +54,6 @@ Login to your instance using your SSH Client
 Paste the applicable command below into your terminal to run the automated masternode installation script.
 *these scripts automatically install the daemon and a bootstrap; therefore, they will take some time to run. Please be patient.*
 
-### Ubuntu 16.04 VPS:
-
-Install dos2unix:
-```
-sudo apt-get install dos2unix -y
-
-```
-Run the setup commands:
-
-```
-wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1604.sh
-chmod +x masternode1604.sh
-dos2unix masternode1604.sh
-bash masternode1604.sh
-
-```  
-
 ### Ubuntu 18.04 VPS:
 
 Install dos2unix:
@@ -81,7 +64,7 @@ sudo apt-get install dos2unix -y
 Run the setup commands:
 
 ```
-wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.0/masternode1804.sh
+wget -q https://github.com/CRYPT0BUNTU/buntu/releases/download/1.1/masternode1804.sh
 chmod +x masternode1804.sh
 dos2unix masternode1804.sh
 bash masternode1804.sh
