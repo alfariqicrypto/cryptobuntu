@@ -241,7 +241,7 @@ apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--fo
 libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev \
 libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
 libboost-all-dev  software-properties-common  libdb4.8-dev libdb4.8++-dev  libminiupnpc-dev libzmq3-dev ufw \
-pkg-config libevent-dev  libdb5.3++ unzip libzmq5 >/dev/null 2>&1
+pkg-config libevent-dev  libdb5.3++ unzip libzmq5 libssl1.0.0 openssl1.0 >/dev/null 2>&1
 if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
