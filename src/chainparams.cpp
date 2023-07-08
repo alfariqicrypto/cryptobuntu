@@ -93,6 +93,11 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
+        vSeeds.push_back(CDNSSeedData("dnsseed.cryptobuntu.org", "dnsseed.cryptobuntu.org"));
+        vSeeds.push_back(CDNSSeedData("dnsseed2.cryptobuntu.org", "dnsseed2.cryptobuntu.org"));
+        vSeeds.push_back(CDNSSeedData("dnsseed3.cryptobuntu.org", "dnsseed3.cryptobuntu.org"));
+        vSeeds.push_back(CDNSSeedData("dnsseed4.cryptobuntu.org", "dnsseed4.cryptobuntu.org"));
+        vSeeds.push_back(CDNSSeedData("dnsseed5.cryptobuntu.org", "dnsseed5.cryptobuntu.org"));
         vSeeds.push_back(CDNSSeedData("seed1.buntucryptocurrency.xyz", "seed1.buntucryptocurrency.xyz"));
 
         convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
