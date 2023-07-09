@@ -1,4 +1,4 @@
-# Welcome to Buntu!
+# Welcome to Buntu (BNTU)!
 Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
 
 * Algorithm: Scrypt
@@ -8,9 +8,9 @@ Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
 * Port: 32821
 * RPCport: 32822
 * Block Rewards
-	* PoW: 1 BTNU per block for 600 blocks (to kickstart PoS)
+	* PoW: 1 BNTU per block for 600 blocks (to kickstart PoS)
 	* PoS: 2.25 BNTU per block
-	* Masternodes: .25 BNTU per Block
+	* Masternodes: 0.25 BNTU per Block
 * Masternode collateral: 5 BNTU
 * Minimum Stake Age: 2 hours
 
@@ -25,6 +25,3 @@ Buntu (BNTU) is a Proof-of-Stake based cryptocurrency featuring masternodes
 ***
 
 #### Join us on [Telegram](https://t.me/buntucryptocurrency) and [Discord](https://discord.gg/UbU2f9HFXH). Visit our [Website](http://buntucryptocurrency.com/)  or you can find us on [Twitter](https://twitter.com/buntu_crypto)
-
-***
-### Looking for our logo? You can find it [here](http://buntucryptocurrency.com/WhitepaperPics/buntulogo.png)

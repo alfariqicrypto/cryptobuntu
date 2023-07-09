@@ -14,7 +14,7 @@ sudo apt-get install libzmq3-dev libminiupnpc-dev libevent-dev -y
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config -y  
 sudo apt-get install libevent-dev bsdmainutils software-properties-common -y   
 sudo apt-get update  
-sudo apt-get install libgmp3-dev
+sudo apt-get install libgmp3-dev -y
 sudo apt-get install libdb5.3++ unzip libzmq5 -y
 ```
 ##### Install openssl-1.0.2n on Ubuntu 20.04:
@@ -23,7 +23,7 @@ cd ~
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
 sudo apt-get update && apt-cache policy libssl1.0-dev
-sudo apt-get install libssl1.0-dev
+sudo apt-get install libssl1.0-dev -y
 wget http://www.openssl.org/source/openssl-1.0.2n.tar.gz
 tar -xvzf openssl-1.0.2n.tar.gz
 cd openssl-1.0.2n
