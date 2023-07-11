@@ -7,7 +7,7 @@ COIN_DAEMON='buntud'
 COIN_CLI='buntud'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/CRYPT0BUNTU/Buntu.git'
-COIN_TGZ='https://github.com/CRYPT0BUNTU/Buntu/releases/download/1.2/buntud1804.tar.gz'
+COIN_TGZ='https://github.com/CRYPT0BUNTU/Buntu/releases/download/1.2/buntud2004.tar.gz'
 COIN_BOOTSTRAP=''
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_CHAIN=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
@@ -210,8 +210,8 @@ fi
 
 
 function checks() {
-if [[ $(lsb_release -d) != *18.04* ]]; then
-  echo -e "${RED}You are not running Ubuntu 18.04. Installation is cancelled.${NC}"
+if [[ $(lsb_release -d) != *20.04* ]]; then
+  echo -e "${RED}You are not running Ubuntu 20.04. Installation is cancelled.${NC}"
   exit 1
 fi
 
@@ -227,7 +227,7 @@ fi
 }
 
 function prepare_system() {
-echo -e "Preparing the VPS to setup the ${YELLOW}$COIN_NAME${NC} ${YELLOW}masternode${NC}"
+echo -e "Installing Dependencies to setup the ${CYAN}$COIN_NAME${NC} ${YELLOW}masternode${NC}"
 apt-get update >/dev/null 2>&1
 DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
 DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
@@ -238,10 +238,9 @@ echo -e "Installing required packages, it may take some time to finish.${NC}"
 apt-get update >/dev/null 2>&1
 apt-get install libzmq3-dev -y >/dev/null 2>&1
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make build-essential \
-libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev \
-libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
-libboost-all-dev  software-properties-common  libdb4.8-dev libdb4.8++-dev  libminiupnpc-dev libzmq3-dev ufw \
-pkg-config libevent-dev  libdb5.3++ unzip libzmq5 libssl1.0.0 openssl1.0 >/dev/null 2>&1
+git screen net-tools libtool autotools-dev automake pkg-config libevent-dev bsdmainutils libgmp3-dev \
+software-properties-common libdb5.3++ unzip libzmq5 libminiupnpc-dev libzmq3-dev ufw \
+pkg-config libevent-dev  libdb5.3++ unzip libzmq5 >/dev/null 2>&1
 if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
@@ -249,12 +248,85 @@ if [ "$?" -gt "0" ];
     echo "apt -y install software-properties-common"
     echo "apt-add-repository -y ppa:bitcoin/bitcoin"
     echo "apt-get update"
-    echo "apt install -y make build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev \
-libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev \
-libboost-all-dev  software-properties-common  libdb4.8-dev libdb4.8++-dev  libminiupnpc-dev libzmq3-dev ufw \
+    echo "apt install -y make build-essential \
+git screen net-tools libtool autotools-dev automake pkg-config libevent-dev bsdmainutils libgmp3-dev \
+software-properties-common libdb5.3++ unzip libzmq5 libminiupnpc-dev libzmq3-dev ufw \
 pkg-config libevent-dev  libdb5.3++ unzip libzmq5"
  exit 1
 fi
+clear
+}
+
+function install_openssl() {
+echo -e "Installing ${YELLOW}openssl-1.0.2n${NC}"
+cd ~
+DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
+DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update && apt-cache policy libssl1.0-dev
+sudo apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" libssl1.0-dev
+wget -q http://www.openssl.org/source/openssl-1.0.2n.tar.gz
+tar -xvzf openssl-1.0.2n.tar.gz
+cd openssl-1.0.2n
+./config --prefix=/usr/
+make
+sudo make install
+cd ~
+echo -e "Finalizing installation of ${YELLOW}openssl-1.0.2n${NC}"
+sleep 60
+clear
+}
+
+function install_berkeley() {
+echo -e "Installing ${PURPLE}berkeley 4.8 db${NC}"
+cd ~
+DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
+DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
+wget -q http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz
+tar -xvzf db-4.8.30.tar.gz
+cd db-4.8.30
+sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' dbinc/atomic.h
+cd build_unix/
+../dist/configure --prefix=/usr/local --enable-cxx
+make
+sudo make install
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+cd ~
+echo -e "Finalizing installation of ${PURPLE}berkeley 4.8 db${NC}"
+sleep 60
+clear
+}
+
+function install_boost() {
+echo -e "Installing ${GREEN}boost 1.57${NC} This may take awhile. Please be patient....."
+cd ~
+DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
+DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
+wget -q http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.gz
+tar -xvzf boost_1_57_0.tar.gz
+cd boost_1_57_0
+./bootstrap.sh
+./b2
+sudo ./b2 install
+sudo ldconfig
+cd ~
+echo -e "Finalizing Installation of ${GREEN}boost 1.57${NC}"
+sleep 60
+clear
+}
+
+function buildbuntu() {
+echo -e "Building ${CYAN}Buntu${NC} from source..."
+cd ~ >/dev/null 2>&1
+sudo git clone $COIN_REPO > /dev/null 2>&1
+sudo touch Buntu
+cd Buntu/src
+sudo make -f makefile.unix
+echo -e "Completing compiliation of ${CYAN}Buntu${NC}"
+sleep 120
+sudo cp $COIN_DAEMON $COIN_CLI $COIN_PATH
+cd ~
 clear
 }
 
@@ -287,7 +359,7 @@ function setup_node() {
   create_key
   update_config
   enable_firewall
-  download_bootstrap
+  #download_bootstrap
   important_information
   configure_systemd
 }
@@ -299,5 +371,9 @@ clear
 purgeOldInstallation
 checks
 prepare_system
+install_openssl
+install_berkeley
+install_boost
+#buildbuntu
 download_node
 setup_node
